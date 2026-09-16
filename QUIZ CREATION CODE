@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<ctype.h>
+int main(){
+    char questions[][90]={"Who was the first Prime Minister of India?\n","\nWho was the first President of the United States?\n","\nWho became the first Chancellor of a unified Germany in 1871?\n"};
+    char options[][120]={"\nA.Jawaharlal Nehru\nB.Sardar Vallabhbhai Patel\nC.Rajendra Prasad\nD.Lal Bahadur Shastri\n","\nA.Abraham Lincoln\nB.George Washington\nC.Thomas Jefferson\nD.John Adams\n","\nA.Otto von Bismarck\nB.Kaiser Wilhelm II\nC.Friedrich Ebert\nD.Helmut Kohl\n"};
+    char answer='\0';
+    char actual[3]={'A','B','A'};
+    int score=0;
+
+    printf("*** QUIZ GAME ***\n");
+
+    for(int i=0;i<3;i++){
+    printf(questions[i]);
+    printf(options[i]);
+
+    printf("INPUT AN ANSWER:");
+
+    scanf(" %c",&answer);
+    answer=toupper(answer);
+    //after the 1st iteration of the loop and when I press enter the computer takes n the /n so we have to give space before %c to avoid blank spaces
+
+    if(answer==actual[i]){
+        printf("CORRECT !!\n");
+        score++;
+    }
+
+    else{
+        printf("WRONG\n");
+    }
+
+
+    }
+
+    printf("\nYOUR SCORE IS %d OUT OF 3",score);
+
+
+}
