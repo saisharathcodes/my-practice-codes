@@ -1,0 +1,14 @@
+import time
+#creating a timer using importing time and time.sleep(1) and also /r recursive tab to actually get it back to the top and end=" "
+timer=int(input("enter time in seconds for timer:"))
+
+for i in range(timer,-1,-1):
+    hours=i//3600
+    minutes=(i//60)%60
+    seconds=i%60
+
+    print(f"\rHOURS:{hours:02} MINUTES: {minutes:02} SECONDS: {seconds:02}",end=" ")
+
+    time.sleep(1)
+
+print("TIMER STOPPED")
