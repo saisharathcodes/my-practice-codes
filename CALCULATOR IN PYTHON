@@ -1,0 +1,20 @@
+#calculator program
+
+user=(input("Enter a operation you want to do (+ - * /):"))
+num1=float(input("Enter number 1:"))
+num2=float(input("Enter number 2:"))
+
+if user=="+":
+    print(f"the sum of the 2 terms is {num1+num2}")
+elif user=="-":
+    print(f"the difference between 2 terms is {(num1-num2)}")
+elif user=="*":
+    print(f"the product between 2 terms is {num1*num2}")
+elif user=="/":
+    if num1==0 or num2==0:
+        print("dont give zero")
+    else:
+        print(f"the division of 2 terms is {num1/num2}")
+
+else:
+    print("Enter a valid input")
