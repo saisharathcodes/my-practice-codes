@@ -1,0 +1,41 @@
+//did this project to practice enum{};
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+typedef enum{I=1,V=5,X=10,L=50,C=100,D=500,M=1000} roman;
+int getval(char c){
+    switch(c){
+        case 'I': return I;
+        case 'V': return V;
+        case 'X': return X;
+        case 'L': return L;
+        case 'C': return C;
+        case 'D': return D;
+        case 'M': return M;
+
+    }
+}
+
+int main(){
+    printf("converting roman numerals to numbers\n");
+    printf("enter a roman numeral:");
+    char str[20];
+    int result=0;
+    scanf("%s",str);
+    int i,len=strlen(str);
+    for(i=0;i<len;i++){
+        int current=getval(toupper(str[i]));
+        int next = (i + 1 < len) ? getval(toupper(str[i+1])) : 0;
+
+        if(current>next){
+            result+=current;
+        }
+
+        else if(current<next){
+            result-=current;
+        }
+
+    }
+    printf("%d",result);
+
+}
