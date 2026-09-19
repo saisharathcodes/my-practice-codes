@@ -1,0 +1,29 @@
+import sys
+rice=sys.argv
+if rice[3]=="0" and rice[2]=="/":
+    print("invalid")
+
+elif rice[2]=="+":
+    ee=int(rice[1])
+    gg=int(rice[3])
+    print(ee+gg)
+
+elif rice[2]=="-":
+    ee=int(rice[1])
+    gg=int(rice[3])
+    print(ee-gg)
+
+elif rice[2]=="*":
+    ee=int(rice[1])
+    gg=int(rice[3])
+    print(ee*gg)
+    
+
+elif rice[2]=="/":
+    ee=int(rice[1])
+    gg=int(rice[3])
+    print(ee//gg)
+
+else:
+    print("invalid")
+    
