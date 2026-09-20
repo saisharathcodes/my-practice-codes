@@ -1,0 +1,27 @@
+#include<stdio.h>
+//stat creator table
+
+typedef struct{
+    char name[40];
+    char class[30];
+    int level;
+    int health;
+    int attack;
+} game;
+
+int main(){
+    printf("Name\t");
+    printf("Class\t");
+    printf("Level\t");
+    printf("Health\t");
+    printf("Attack\n");
+
+    game arr[]={{"kai","warrior",12,850,120},{"luna","mage",13,600,180},{"Rex","assasin",10,470,200}};
+    int size=sizeof(arr);
+    int in=sizeof(arr[0]);
+    int i;
+    for(i=0;i<size/in;i++){
+        printf("%s\t%s\t%d\t%d\t%d\n",arr[i].name,arr[i].class,arr[i].level,arr[i].health,arr[i].attack);   }
+
+
+    }
